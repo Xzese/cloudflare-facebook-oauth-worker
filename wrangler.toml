@@ -1,0 +1,14 @@
+name = "cloudflare-facebook"
+main = "src/index.ts"
+compatibility_date = "2026-06-07"
+keep_vars = true
+
+[observability]
+enabled = true
+
+[secrets]
+required = ["APP_SECRET", "TOKEN_API_KEY"]
+
+[[kv_namespaces]]
+binding = "FACEBOOK_AUTH"
+id = "replace-with-your-kv-namespace-id"

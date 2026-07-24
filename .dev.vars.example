@@ -1,0 +1,7 @@
+APP_ID=replace-with-your-facebook-app-id
+APP_SECRET=development-app-secret
+TOKEN_API_KEY=replace-with-a-long-random-value
+GRAPH_SCOPE=publish_video,pages_show_list,instagram_basic,instagram_content_publish,pages_read_engagement,business_management
+GRAPH_API_VERSION=v25.0
+TEAM_DOMAIN=https://your-team.cloudflareaccess.com
+POLICY_AUD=replace-with-your-access-application-aud-tag

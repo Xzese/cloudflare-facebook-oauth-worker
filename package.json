@@ -1,0 +1,52 @@
+{
+	"name": "cloudflare-facebook-oauth-worker",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Cloudflare Worker for Facebook OAuth token management with optional server-side token retrieval.",
+	"keywords": [
+		"access",
+		"cloudflare",
+		"facebook",
+		"oauth",
+		"workers"
+	],
+	"homepage": "https://github.com/Xzese/cloudflare-facebook-oauth-worker#readme",
+	"bugs": {
+		"url": "https://github.com/Xzese/cloudflare-facebook-oauth-worker/issues"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Xzese/cloudflare-facebook-oauth-worker.git"
+	},
+	"type": "module",
+	"scripts": {
+		"cloudflare:config": "node scripts/generate-cloudflare-config.mjs",
+		"cloudflare:deploy": "npm run cloudflare:config && wrangler deploy --config wrangler.generated.json",
+		"cloudflare:upload": "npm run cloudflare:config && wrangler versions upload --config wrangler.generated.json",
+		"deploy": "wrangler deploy --config wrangler.production.toml",
+		"dev": "wrangler dev",
+		"format": "oxfmt --write .",
+		"format:check": "oxfmt --check .",
+		"lint": "oxlint .",
+		"lint:fix": "oxlint --fix",
+		"test": "npm run type-check && node --test tests/*.test.ts",
+		"cf-typegen": "wrangler types --env-file .dev.vars.example --strict-vars=false",
+		"cf-typegen:check": "wrangler types --env-file .dev.vars.example --strict-vars=false --check",
+		"public-config:check": "node scripts/check-public-config.mjs",
+		"type-check": "tsc --noEmit",
+		"check": "tsc --noEmit && wrangler deploy --dry-run"
+	},
+	"dependencies": {
+		"jose": "^6.2.4"
+	},
+	"devDependencies": {
+		"oxfmt": "^0.60.0",
+		"oxlint": "^1.75.0",
+		"typescript": "^7.0.2",
+		"wrangler": "^4.114.0"
+	},
+	"engines": {
+		"node": ">=22.18.0"
+	}
+}

@@ -1,0 +1,42 @@
+name: ci
+
+on:
+    push:
+        branches: ["main"]
+    pull_request:
+
+permissions:
+    contents: read
+
+jobs:
+    ci:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v7
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v7
+              with:
+                  node-version: 22
+
+            - name: Install
+              run: npm ci
+
+            - name: Format check
+              run: npm run format:check
+
+            - name: Lint
+              run: npm run lint
+
+            - name: Type check
+              run: npm run type-check
+
+            - name: Test
+              run: npm test
+
+            - name: Cloudflare types check
+              run: npm run cf-typegen:check
+
+            - name: Public config check
+              run: npm run public-config:check
