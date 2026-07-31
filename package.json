@@ -41,7 +41,7 @@
 		"jose": "^6.2.4"
 	},
 	"devDependencies": {
-		"oxfmt": "^0.60.0",
+		"oxfmt": "^0.61.0",
 		"oxlint": "^1.75.0",
 		"typescript": "^7.0.2",
 		"wrangler": "^4.114.0"
