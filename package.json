@@ -38,7 +38,7 @@
 		"check": "tsc --noEmit && wrangler deploy --dry-run"
 	},
 	"dependencies": {
-		"jose": "^6.2.4"
+		"jose": "^6.2.10"
 	},
 	"devDependencies": {
 		"oxfmt": "^0.60.0",
