@@ -234,9 +234,14 @@ replacing them.
 
 - `npm run public-config:check` must pass before releasing.
 - The repository CI verifies formatting, lint, typing, tests, and generated type/config checks.
-- Dependabot updates are enabled for:
+- Dependabot checks weekly and groups minor/patch updates separately for:
     - npm dependencies
     - GitHub Actions
+- Routine Dependabot PRs enable squash auto-merge; major updates need manual review.
+- Repository auto-merge must be enabled and `main` must require up-to-date passing
+  `ci` (GitHub Actions) and `Workers Builds: cloudflare-facebook` (Cloudflare) checks.
+  The metadata-only workflow never checks out PR code; GitHub enforces these
+  repository settings before merging.
 
 ## Warnings
 

@@ -38,13 +38,13 @@
 		"check": "tsc --noEmit && wrangler deploy --dry-run"
 	},
 	"dependencies": {
-		"jose": "^6.2.10"
+		"jose": "^6.2.12"
 	},
 	"devDependencies": {
-		"oxfmt": "^0.66.0",
-		"oxlint": "^1.81.0",
+		"oxfmt": "^0.67.0",
+		"oxlint": "^1.82.0",
 		"typescript": "^7.0.2",
-		"wrangler": "^4.128.0"
+		"wrangler": "^4.130.0"
 	},
 	"engines": {
 		"node": ">=22.18.0"

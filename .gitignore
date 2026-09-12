@@ -39,3 +39,6 @@ wrangler.*.toml
 *.cer
 *.der
 *.jks
+
+# Local repository index
+.repowise/
