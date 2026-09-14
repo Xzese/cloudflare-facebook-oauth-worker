@@ -1,5 +1,12 @@
 # Cloudflare Facebook OAuth Worker
 
+<p align="center">
+  <a href="https://github.com/Xzese/cloudflare-facebook-oauth-worker/stargazers"><img src="https://img.shields.io/github/stars/Xzese/cloudflare-facebook-oauth-worker?style=flat-square" alt="Stars"></a>
+  <a href="https://github.com/Xzese/cloudflare-facebook-oauth-worker/commits/main"><img src="https://img.shields.io/github/last-commit/Xzese/cloudflare-facebook-oauth-worker?style=flat-square" alt="Last commit"></a>
+  <a href="https://nodejs.org"><img src="https://img.shields.io/badge/Node.js-22.18.0-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js"></a>
+  <a href="https://workers.cloudflare.com"><img src="https://img.shields.io/badge/Cloudflare-Workers-F38020?style=flat-square&logo=cloudflare&logoColor=white" alt="Cloudflare Workers"></a>
+</p>
+
 [`Xzese/cloudflare-facebook-oauth-worker`](https://github.com/Xzese/cloudflare-facebook-oauth-worker)
 is a **public-source, private-deployments** template for obtaining and exposing Facebook OAuth
 tokens with Cloudflare Workers.
