@@ -80,6 +80,11 @@ automatically use the local-development Access exception.
     npm install
     ```
 
+    Installation generates `worker-configuration.d.ts` from the public Wrangler config using
+    the installed Wrangler version. This file is ignored by Git and formatting tools.
+    After changing `wrangler.toml`, or installing with `--ignore-scripts`, run
+    `npm run cf-typegen` before type checking or starting development.
+
 2. Create local vars from the example:
 
     ```sh
@@ -245,6 +250,9 @@ replacing them.
     - npm dependencies
     - GitHub Actions
 - Routine Dependabot PRs enable squash auto-merge; major updates need manual review.
+- CI generates Worker types during `npm ci` and validates them with the updated dependencies.
+  No workflow commits generated types to Dependabot branches, allowing Dependabot to keep
+  rebasing and updating its pull requests automatically.
 - Repository auto-merge must be enabled and `main` must require up-to-date passing
   `ci` (GitHub Actions) and `Workers Builds: cloudflare-facebook` (Cloudflare) checks.
   The metadata-only workflow never checks out PR code; GitHub enforces these
