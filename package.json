@@ -41,10 +41,10 @@
 		"jose": "^6.2.12"
 	},
 	"devDependencies": {
-		"oxfmt": "^0.67.0",
-		"oxlint": "^1.82.0",
+		"oxfmt": "^0.70.0",
+		"oxlint": "^1.85.0",
 		"typescript": "^7.0.2",
-		"wrangler": "^4.130.0"
+		"wrangler": "^4.136.2"
 	},
 	"engines": {
 		"node": ">=22.18.0"
